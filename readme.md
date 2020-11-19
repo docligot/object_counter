@@ -28,5 +28,7 @@ Then to count:
 from skimage import measure
 labels = measure.label(drops)
 print(labels.max())
+
+# 96
 ```
 
