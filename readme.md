@@ -5,6 +5,7 @@ This uses code from https://stackoverflow.com/questions/38619382/how-to-count-ob
 ##
 
 Original image: 
+
 ![Alt text](https://github.com/docligot/object_counter/blob/main/dots.png)
 
 ```
@@ -20,6 +21,7 @@ plt.show()
 ```
 
 Will render the image as: 
+
 ![Alt text](https://github.com/docligot/object_counter/blob/main/bw_dots.png)
 
 Then to count: 
