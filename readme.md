@@ -1,8 +1,8 @@
-# Count Dots In An Image
+# Count Objects In An Image
 
-This uses code from https://stackoverflow.com/questions/38619382/how-to-count-objects-in-image-using-python to count dots in an image. 
+These code snippets allow counting of objects in an image. 
 
-##
+## Use-case: Counting Dots
 
 Original image: 
 
@@ -34,3 +34,26 @@ print(labels.max())
 # 96
 ```
 
+## Use case: Count contours
+
+Original Image: 
+
+![Alt text](https://github.com/docligot/object_counter/blob/main/containers.png)
+
+```
+import cv2
+image= cv2.imread('containers.png')
+gray= cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+edges= cv2.Canny(gray, 50, 200)
+_, contours, _= cv2.findContours(edges.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+number_of_objects_in_image= len(contours)
+print ("The number of objects in this image: ", str(number_of_objects_in_image))
+
+# The number of objects in this image:  4
+
+```
+
+## References
+
+Counting Dots: https://stackoverflow.com/questions/38619382/how-to-count-objects-in-image-using-python 
+Counting Containers: http://www.learningaboutelectronics.com/Articles/How-to-count-the-number-of-objects-in-an-image-Python-OpenCV.php
