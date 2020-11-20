@@ -13,7 +13,7 @@ from skimage import io, filters
 from scipy import ndimage
 import matplotlib.pyplot as plt
 
-im = io.imread('ba3g0.jpg', as_grey=True)
+im = io.imread('dots.png', as_grey=True)
 val = filters.threshold_otsu(im)
 drops = ndimage.binary_fill_holes(im < val)
 plt.imshow(drops, cmap='gray')
