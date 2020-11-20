@@ -40,8 +40,8 @@ print(labels.max())
 
 ```
 import cv2
-image= cv2.imread('dots.png')
-gray= cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+image = cv2.imread('dots.png')
+gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 plt.imshow(gray, cmap='gray')
 plt.show()
 ```
@@ -53,9 +53,9 @@ Will render image as:
 Then to count: 
 
 ```
-edges= cv2.Canny(gray, 50, 200)
-_, contours, _= cv2.findContours(edges.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-number_of_objects_in_image= len(contours)
+edges = cv2.Canny(gray, 50, 200)
+_, contours, _ = cv2.findContours(edges.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+number_of_objects_in_image = len(contours)
 print ("The number of objects in this image: ", str(number_of_objects_in_image))
 
 # The number of objects in this image:  96
@@ -100,9 +100,9 @@ print(labels.max())
 
 ```
 import cv2
-image= cv2.imread('containers.png')
-gray= cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-edges= cv2.Canny(gray, 50, 200)
+image = cv2.imread('containers.png')
+gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+edges = cv2.Canny(gray, 50, 200)
 plt.imshow(gray, cmap='gray')
 plt.show()
 
@@ -115,8 +115,8 @@ Will render the image as:
 Then to count: 
 
 ```
-_, contours, _= cv2.findContours(edges.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-number_of_objects_in_image= len(contours)
+_, contours, _ = cv2.findContours(edges.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+number_of_objects_in_image = len(contours)
 print ("The number of objects in this image: ", str(number_of_objects_in_image))
 
 # The number of objects in this image:  4
