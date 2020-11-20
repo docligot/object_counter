@@ -70,14 +70,12 @@ Original Image:
 
 ### skimage method: detect differences
 
-### skimage method: detect differences
-
 ```
 from skimage import io, filters
 from scipy import ndimage
 import matplotlib.pyplot as plt
 
-im = io.imread('dots.png', as_grey=True)
+im = io.imread('containers.png', as_grey=True)
 val = filters.threshold_otsu(im)
 drops = ndimage.binary_fill_holes(im < val)
 plt.imshow(drops, cmap='gray')
@@ -86,7 +84,7 @@ plt.show()
 
 Will render the image as: 
 
-![Alt text](https://github.com/docligot/object_counter/blob/main/bw_dots.png)
+![Alt text](https://github.com/docligot/object_counter/blob/main/bw_containers.png)
 
 Then to count: 
 
@@ -95,7 +93,7 @@ from skimage import measure
 labels = measure.label(drops)
 print(labels.max())
 
-# 96
+# 4
 ```
 
 ### Open CV method: detect contours
@@ -126,5 +124,5 @@ print ("The number of objects in this image: ", str(number_of_objects_in_image))
 
 ## References
 
-Counting Dots: https://stackoverflow.com/questions/38619382/how-to-count-objects-in-image-using-python 
-Counting Containers: http://www.learningaboutelectronics.com/Articles/How-to-count-the-number-of-objects-in-an-image-Python-OpenCV.php
+* Counting Dots: https://stackoverflow.com/questions/38619382/how-to-count-objects-in-image-using-python 
+* Counting Containers: http://www.learningaboutelectronics.com/Articles/How-to-count-the-number-of-objects-in-an-image-Python-OpenCV.php
