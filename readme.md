@@ -109,6 +109,7 @@ plt.show()
 ```
 
 Will render the image as: 
+
 ![Alt text](https://github.com/docligot/object_counter/blob/main/contours_containers.png)
 
 Then to count: 
